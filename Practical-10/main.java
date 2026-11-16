@@ -113,5 +113,18 @@ public class StudentDB {
         }
     }
 }
+\sql
+\connect root@localhost
+CREATE DATABASE student_db;
+SHOW DATABASES;
+Use student_db;
+CREATE TABLE students (
+    roll_no INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    branch VARCHAR(50) NOT NULL,
+    marks DECIMAL(5,2)
+);
+INSERT INTO students VALUES (101, 'Rahul', 'AI & DS', 85.00);
+SELECT* FROM students;
 
 
